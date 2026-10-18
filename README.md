@@ -4,7 +4,6 @@
 
 MPS in Applied Machine Intelligence at **Northeastern University** · GPA 3.96<br>
 Boston, MA<br>
-Looking for a **Spring 2027 co-op** (January to June) in data analytics, operations analytics or AI enablement
 
 ---
 

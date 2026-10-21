@@ -77,6 +77,10 @@ A national HMDA data project spanning SQL preparation, predictive modeling, expl
 
 A complaint triage tool combining retrieval-augmented generation with systematic prompt evaluation.
 
+<p align="center">
+  <img src="assets/claire-demo.gif" alt="CLAIRE demo: triaging a consumer complaint in the Streamlit app" width="700">
+</p>
+
 - The team raised accuracy from **45% to over 80%** across **5 prompting strategies**.
 - Traced the **~80% ceiling** to inconsistent labels in the public CFPB data, not the model.
 - Used retrieval-augmented generation over a **FAISS index**.

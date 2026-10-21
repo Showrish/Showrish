@@ -57,7 +57,7 @@ flowchart LR
 A national HMDA data project spanning SQL preparation, predictive modeling, explainability, and a dashboard and API.
 
 <p align="center">
-  <img src="assets/creditiq-dashboard.png" alt="CreditIQ Power BI dashboard of mortgage approvals and denials, filterable by state" width="700">
+  <img src="assets/credit_dashboard.gif" alt="CreditIQ Power BI dashboard of mortgage approvals and denials, filterable by state" width="700">
 </p>
 
 - Cleaned **12.2M raw records to 8.68M** using SQL in DuckDB.

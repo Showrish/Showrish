@@ -123,6 +123,6 @@ A complaint triage tool combining retrieval-augmented generation with systematic
 
 ## Let's connect
 
-Interested in **data analytics, applied AI, and tools that help operations teams make better decisions**? I'd love to connect.
+Interested in **Data Analytics, Applied AI, and Tools that help operations teams make better decisions**? I'd love to connect.
 
 **[LinkedIn](https://linkedin.com/in/showrish-reddy-sampath-b508a22a6)** · **[sampath.sho@northeastern.edu](mailto:sampath.sho@northeastern.edu)**

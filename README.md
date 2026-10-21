@@ -9,7 +9,7 @@
 MPS in Applied Machine Intelligence, **Northeastern University** · **3.96 GPA**  
 Boston, MA
 
-[Explore my projects](#selected-projects) · [LinkedIn](https://linkedin.com/in/showrish-reddy-sampath-b508a22a6) · [Email me](mailto:sampath.sho@northeastern.edu)
+[Explore my projects](#featured-projects) · [LinkedIn](https://linkedin.com/in/showrish-reddy-sampath-b508a22a6) · [Email me](mailto:sampath.sho@northeastern.edu)
 
 </div>
 
@@ -19,7 +19,7 @@ I work at the messy end of data: reconciling systems that disagree, building das
 
 **I would rather find out why a number looks wrong than publish it.**
 
-## Selected projects
+## Featured projects
 
 ### [ShortageSignal](https://github.com/Showrish/shortagesignal)
 **Connecting drug recalls to shortage signals** · In progress
@@ -99,13 +99,25 @@ A complaint triage tool combining retrieval-augmented generation with systematic
 | **[Request Handoff Check](https://github.com/Showrish/request-handoff-check)** | Reconciles two hiring systems using **synthetic data**. Identified a **7.4-day Finance approval bottleneck** and caught hidden spaces, a mistyped ID, and a duplicate. | Excel · XLOOKUP · COUNTIFS · PivotTables · Reconciliation · Process analytics |
 | **[Smart Water Quality](https://github.com/Showrish/Smart-Water-Quality-Prediction)** | IoT water quality monitoring. The Streamlit rebuild of its dashboard checks sensor readings **every 15 seconds** and flags stale data and impossible readings. **[View original dashboard ↗](https://waterquality-1dcdc.web.app/)** | IoT · Sensor validation · Monitoring · Streamlit · Firebase |
 
+## How I use AI
+
+| AI? | Task | My approach |
+| :---: | :--- | :--- |
+| ✅ | Classifying and tagging messy text | OpenAI and Claude APIs called from Python, with fixed label sets and structured outputs |
+| ✅ | Automating repetitive work | Scheduled pipelines with data checks on every run |
+| ✅ | Writing and debugging code faster | Claude, Claude Code and ChatGPT, and I run and check everything before it ships |
+| ✅ | Drafting documentation and reports | READMEs, summaries and first drafts, which I edit and fact-check before they go out |
+| ❌ | Replacing rules that already work | Simple, predictable rules come first |
+| ❌ | Trusting output I haven't measured | Models get scored against labeled data or an answer key first |
+| ❌ | Final calls on unclear cases | Low-confidence results go to a person |
+
 ## Technical toolkit
 
 | Area | Tools |
 | :--- | :--- |
 | **Data and analytics** | Python · pandas · NumPy · SQL · DuckDB · Snowflake · PostgreSQL · Excel |
 | **Machine learning** | scikit-learn · LightGBM · XGBoost · SHAP |
-| **Applied AI** | OpenAI API · Claude · RAG · FAISS · Prompt engineering |
+| **Applied AI** | OpenAI API · Claude API · RAG · FAISS · Prompt engineering |
 | **Dashboards and applications** | Power BI · Tableau · Streamlit · FastAPI |
 | **Engineering and cloud** | Git · GitHub Actions · pytest · AWS (EC2, S3, Glue) |
 

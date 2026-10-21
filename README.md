@@ -26,6 +26,20 @@ I work at the messy end of data: reconciling systems that disagree, building das
 
 An automated daily pipeline linking FDA drug recalls to shortages, with data checks and evaluated AI tagging built into the workflow.
 
+```mermaid
+flowchart LR
+    subgraph daily["Daily run on GitHub Actions"]
+        A["openFDA recalls<br>and shortages"] --> B{"16 data<br>checks"}
+        B -->|error| X["Stop and keep<br>yesterday's data"]
+        B -->|pass| C["Normalize drug IDs and<br>match recalls to shortages"]
+        C --> D["SQL rules tag<br>root causes"]
+        D --> E["Claude Haiku picks from<br>12 allowed answers"]
+        E --> F["Low-confidence<br>tags to review"]
+    end
+    D -.->|scored against| K["Hand-audited answer key<br>about 100 recalls"]
+    E -.->|scored against| K
+```
+
 - Runs **16 data checks** on every pipeline execution.
 - Tags root causes with **SQL rules first**, then **Claude Haiku** limited to **12 allowed answers**.
 - Scores both against **~100 hand-audited recalls** and routes low-confidence tags to review.
@@ -41,6 +55,10 @@ An automated daily pipeline linking FDA drug recalls to shortages, with data che
 **Mortgage approval prediction with a fairness audit**
 
 A national HMDA data project spanning SQL preparation, predictive modeling, explainability, and a dashboard and API.
+
+<p align="center">
+  <img src="assets/creditiq-dashboard.png" alt="CreditIQ Power BI dashboard of mortgage approvals and denials, filterable by state" width="700">
+</p>
 
 - Cleaned **12.2M raw records to 8.68M** using SQL in DuckDB.
 - Built a **LightGBM model with 0.877 ROC-AUC**.

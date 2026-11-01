@@ -2,127 +2,115 @@
 
 # Showrish Reddy Sampath
 
-### Turning messy data into decisions people can trust.
+### Data Analytics · Applied AI · Operations
 
-**Data Analytics · Applied AI · Operations**
+**I turn messy data into reliable dashboards, automated workflows, and practical AI tools.**
 
-MPS in Applied Machine Intelligence, **Northeastern University** · **3.96 GPA**  
+MPS in Applied Machine Intelligence, **Northeastern University** · **3.96/4.0 GPA**  
 Boston, MA
 
-[Explore my projects](#featured-projects) · [LinkedIn](https://linkedin.com/in/showrish-reddy-sampath-b508a22a6) · [Email me](mailto:sampath.sho@northeastern.edu)
+[Explore my work](#featured-work) · [LinkedIn](https://linkedin.com/in/showrish-reddy-sampath-b508a22a6) · [Email me](mailto:sampath.sho@northeastern.edu)
 
 </div>
 
 ---
 
-I work at the messy end of data: reconciling systems that disagree, building dashboards people can trust, and using AI to automate repetitive work. My projects connect **data quality, analytics, and practical applications**, with a focus on making the results useful to the people making decisions.
+I work where data meets day-to-day operations: reconciling inconsistent records, building dashboards, and turning repetitive analysis into repeatable workflows. My projects span pharmaceutical monitoring, mortgage analytics, and complaint triage.
 
 **I would rather find out why a number looks wrong than publish it.**
 
-## Featured projects
+## Featured work
 
 ### [ShortageSignal](https://github.com/Showrish/shortagesignal)
-**Connecting drug recalls to shortage signals** · In progress
 
-An automated daily pipeline linking FDA drug recalls to shortages, with data checks and evaluated AI tagging built into the workflow.
+**Daily drug recall monitoring with AI-assisted analysis**
 
-```mermaid
-flowchart LR
-    subgraph daily["Daily run on GitHub Actions"]
-        A["openFDA recalls<br>and shortages"] --> B{"16 data<br>checks"}
-        B -->|error| X["Stop and keep<br>yesterday's data"]
-        B -->|pass| C["Normalize drug IDs and<br>match recalls to shortages"]
-        C --> D["SQL rules tag<br>root causes"]
-        D --> E["Claude Haiku picks from<br>12 allowed answers"]
-        E --> F["Low-confidence<br>tags to review"]
-    end
-    D -.->|scored against| K["Hand-audited answer key<br>about 100 recalls"]
-    E -.->|scored against| K
-```
+Connects public FDA recall and shortage data so a reviewer can see what changed and what needs a closer look.
 
-- Runs **16 data checks** on every pipeline execution.
-- Tags root causes with **SQL rules first**, then **Claude Haiku** limited to **12 allowed answers**.
-- Scores both against **~100 hand-audited recalls** and routes low-confidence tags to review.
-- Includes continuous integration with **ruff and pytest**.
+- **16 data checks** run before saving. Critical failures preserve the last successful dataset.
+- SQL rules classify root causes first, with Claude handling unresolved cases across **12 allowed labels**. Uncertain outputs go to review queues.
+- A **Streamlit dashboard**, weekly digests, and Excel review lists make the pipeline's results usable.
+- **Ask the data** answers natural-language questions through restricted, read-only SQL and shows the query behind each answer.
 
-`Data pipelines` `Data quality` `SQL` `Claude Haiku` `GitHub Actions`
+`Python` `SQL` `DuckDB` `Claude API` `Streamlit` `Power BI` `GitHub Actions`
 
-[Explore the repository →](https://github.com/Showrish/shortagesignal)
+**[Open dashboard ↗](https://shortagesignal.streamlit.app)** · [Code](https://github.com/Showrish/shortagesignal) · [Evaluation and limitations](https://github.com/Showrish/shortagesignal/blob/main/docs/limitations.md)
+
+<sub>The dashboard may take a moment to wake. The Ask the data tab is passcode-protected.</sub>
 
 ---
 
 ### [CreditIQ](https://github.com/Showrish/Credit-Risk-Scoring)
-**Mortgage approval prediction with a fairness audit**
 
-A national HMDA data project spanning SQL preparation, predictive modeling, explainability, and a dashboard and API.
+**8.68 million mortgage applications, from SQL analysis to explainable ML**
+
+A personal research project exploring historical approval decisions and demographic disparities in public HMDA data.
+
+- Prepared **12.2M raw records into 8.68M analysis-ready rows** using SQL and DuckDB.
+- Achieved **0.877 ROC-AUC** with LightGBM on the project's held-out test split.
+- Found a **15.1 percentage-point gap** in raw denial rates between Black and White applicants. This is an unadjusted comparison.
+- Presented findings through **Power BI**, explained model behavior with **SHAP**, and built a **FastAPI** prediction interface.
 
 <p align="center">
-  <img src="assets/credit_dashboard.gif" alt="CreditIQ Power BI dashboard of mortgage approvals and denials, filterable by state" width="700">
+  <a href="https://github.com/Showrish/Credit-Risk-Scoring#power-bi-dashboard">
+    <img src="https://raw.githubusercontent.com/Showrish/Credit-Risk-Scoring/main/screenshots/dashboard.png" alt="CreditIQ Power BI dashboard showing 8.68 million applications, approval patterns, and demographic comparisons" width="760">
+  </a>
 </p>
-
-- Cleaned **12.2M raw records to 8.68M** using SQL in DuckDB.
-- Built a **LightGBM model with 0.877 ROC-AUC**.
-- Found a **15-point denial gap** between Black and White applicants (37.3% vs 22.2%) using SQL.
-- Explained the model with **SHAP**, where race ranked 5th among its drivers.
-- Presented results through **Power BI** and **FastAPI**.
 
 `SQL` `DuckDB` `LightGBM` `SHAP` `Power BI` `FastAPI`
 
-[Explore the repository →](https://github.com/Showrish/Credit-Risk-Scoring)
+[Explore the project →](https://github.com/Showrish/Credit-Risk-Scoring) · [Model comparison](https://github.com/Showrish/Credit-Risk-Scoring#model-comparison)
 
 ---
 
 ### [CLAIRE](https://github.com/Showrish/CLAIRE)
-**LLM complaint triage with measurable evaluation** · Team of 4
 
-A complaint triage tool combining retrieval-augmented generation with systematic prompt evaluation.
+**Consumer complaint triage with an evaluation workflow** · Four-person course project
+
+Classifies complaints, assigns resolution timelines, and drafts acknowledgment messages using GPT-4o-mini and retrieval-augmented generation.
+
+- **My contribution:** built the **Streamlit application and Evaluate tab**, including the interface for testing labeled complaint data.
+- The team improved product classification from a **45% zero-shot baseline to 80%+** in the final system's reported evaluation.
+- Error analysis identified overlapping complaint labels as a limitation of the public dataset.
+
+<details>
+<summary><strong>Watch the complaint-triage demo</strong></summary>
 
 <p align="center">
-  <img src="assets/claire-demo.gif" alt="CLAIRE demo: triaging a consumer complaint in the Streamlit app" width="700">
+  <img src="https://raw.githubusercontent.com/Showrish/Showrish/main/assets/claire-demo.gif" alt="CLAIRE Streamlit demo showing consumer complaint triage" width="760">
 </p>
 
-- The team raised accuracy from **45% to over 80%** across **5 prompting strategies**.
-- Traced the **~80% ceiling** to inconsistent labels in the public CFPB data, not the model.
-- Used retrieval-augmented generation over a **FAISS index**.
-- **My contribution:** built the **Streamlit application and its Evaluate tab**, making evaluation accessible through the interface.
+</details>
 
-`LLMs` `RAG` `FAISS` `Prompt engineering` `Streamlit`
+`OpenAI API` `RAG` `FAISS` `Prompt evaluation` `Streamlit`
 
-[Explore the repository →](https://github.com/Showrish/CLAIRE)
+[Explore the project →](https://github.com/Showrish/CLAIRE) · [Evaluation results](https://github.com/Showrish/CLAIRE#prompting-strategy-results)
 
-## More ways I work with data
+## More applied work
 
-| Project | Problem and evidence | Tools / approach |
-| :--- | :--- | :--- |
-| **[Batch Monitor](https://github.com/Showrish/snowflake-batch-monitor)** | Monitors data quality across **1,005 public pharmaceutical batches**. Includes an I-MR control chart and lot genealogy, with Power BI figures reconciled against SQL and pandas. | Snowflake · Streamlit in Snowflake · Power BI · SQL · pandas |
-| **[WeatherCastML](https://github.com/Showrish/Weather-Forecast)** | Weather forecasting app with **3 LightGBM models** built on **92M NOAA records**. Next-day temperature achieved **R² 0.967**, with errors of **3.7°F and 4.6°F in two live Boston tests**. | LightGBM · DuckDB · FastAPI · Forecasting · Web application |
-| **[Request Handoff Check](https://github.com/Showrish/request-handoff-check)** | Reconciles two hiring systems using **synthetic data**. Identified a **7.4-day Finance approval bottleneck** and caught hidden spaces, a mistyped ID, and a duplicate. | Excel · XLOOKUP · COUNTIFS · PivotTables · Reconciliation · Process analytics |
-| **[Smart Water Quality](https://github.com/Showrish/Smart-Water-Quality-Prediction-using-IoT-and-ML-)** | IoT water quality monitoring. The Streamlit rebuild of its dashboard checks sensor readings **every 15 seconds** and flags stale data and impossible readings. **[View original dashboard ↗](https://waterquality-1dcdc.web.app/)** | IoT · Sensor validation · Monitoring · Streamlit · Firebase |
-
-## How I use AI
-
-| AI? | Task | My approach |
-| :---: | :--- | :--- |
-| ✅ | Classifying and tagging messy text | OpenAI and Claude APIs called from Python, with fixed label sets and structured outputs |
-| ✅ | Automating repetitive work | Scheduled pipelines with data checks on every run |
-| ✅ | Writing and debugging code faster | Claude, Claude Code and ChatGPT, and I run and check everything before it ships |
-| ✅ | Drafting documentation and reports | READMEs, summaries and first drafts, which I edit and fact-check before they go out |
-| ❌ | Replacing rules that already work | Simple, predictable rules come first |
-| ❌ | Trusting output I haven't measured | Models get scored against labeled data or an answer key first |
-| ❌ | Final calls on unclear cases | Low-confidence results go to a person |
+| Project | What it demonstrates |
+| :--- | :--- |
+| **[Batch Monitor](https://github.com/Showrish/snowflake-batch-monitor)** | **Snowflake and manufacturing analytics.** Validates **1,005 public pharmaceutical batches**, with I-MR control charts and material genealogy in Streamlit. Checks results against independent pandas calculations. |
+| **[Request Handoff Check](https://github.com/Showrish/request-handoff-check)** | **Excel and process analysis.** Reconciles hiring requests across two systems, finds missing records, and identifies a **7.4-day Finance approval bottleneck**. Built on synthetic data with XLOOKUP, COUNTIFS, and PivotTables. |
+| **[WeatherCastML](https://github.com/Showrish/Weather-Forecast)** | **Data processing and forecasting.** Processes **92M NOAA records** with DuckDB and builds three LightGBM models for temperature, rain, and extreme weather, with a FastAPI interface. |
+| **[Smart Water Quality](https://github.com/Showrish/Smart-Water-Quality-Prediction-using-IoT-and-ML-)** | **IoT and operational monitoring.** An undergraduate sensor and ML project, later extended with a Streamlit dashboard that flags stale data and implausible readings. |
 
 ## Technical toolkit
 
-| Area | Tools |
+| Area | Tools I use |
 | :--- | :--- |
-| **Data and analytics** | Python · pandas · NumPy · SQL · DuckDB · Snowflake · PostgreSQL · Excel |
-| **Machine learning** | scikit-learn · LightGBM · XGBoost · SHAP |
-| **Applied AI** | OpenAI API · Claude API · RAG · FAISS · Prompt engineering |
-| **Dashboards and applications** | Power BI · Tableau · Streamlit · FastAPI |
-| **Engineering and cloud** | Git · GitHub Actions · pytest · AWS (EC2, S3, Glue) |
+| **Analysis and reconciliation** | Python · SQL · pandas · NumPy · Excel (XLOOKUP, PivotTables, reconciliation) |
+| **Dashboards and applications** | Power BI (DAX, Power Query) · Tableau · Streamlit · FastAPI |
+| **Databases and cloud** | DuckDB · Snowflake · PostgreSQL · AWS EC2, S3, Glue |
+| **Machine learning and AI** | scikit-learn · LightGBM · XGBoost · SHAP · OpenAI API · Claude API · RAG · FAISS |
+| **Testing and automation** | Git · GitHub Actions · pytest · ruff |
 
-## Let's connect
+## How I work
 
-Interested in **Data Analytics, Applied AI, and Tools that help operations teams make better decisions**? I'd love to connect.
+- **Check the data first.** Investigate missing records, mismatched IDs, and surprising totals before interpreting results.
+- **Evaluate AI against examples.** Use explicit labels, inspect errors, and make uncertain cases visible for review.
+- **Make the output usable.** Build dashboards, review lists, and documentation that help someone take the next step.
 
-**[LinkedIn](https://linkedin.com/in/showrish-reddy-sampath-b508a22a6)** · **[sampath.sho@northeastern.edu](mailto:sampath.sho@northeastern.edu)**
+## Connect
+
+**[sampath.sho@northeastern.edu](mailto:sampath.sho@northeastern.edu)** · **[LinkedIn](https://linkedin.com/in/showrish-reddy-sampath-b508a22a6)**

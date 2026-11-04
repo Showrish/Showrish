@@ -4,22 +4,28 @@
 
 ### Data Analytics · Applied AI · Operations
 
-**I turn messy data into reliable dashboards, automated workflows, and practical AI tools.**
+**I turn messy operational data into reliable dashboards, automated workflows, and practical AI tools.**
 
 MPS in Applied Machine Intelligence, **Northeastern University** · **3.96/4.0 GPA**  
 Boston, MA
 
-[Explore my work](#featured-work) · [LinkedIn](https://linkedin.com/in/showrish-reddy-sampath-b508a22a6) · [Email me](mailto:sampath.sho@northeastern.edu)
+[Explore my work](#featured-work) · [Browse by skill](#more-applied-work) · [LinkedIn](https://linkedin.com/in/showrish-reddy-sampath-b508a22a6) · [Email me](mailto:sampath.sho@northeastern.edu)
 
 </div>
 
 ---
 
-I work where data meets day-to-day operations: reconciling inconsistent records, building dashboards, and turning repetitive analysis into repeatable workflows. My projects span pharmaceutical monitoring, mortgage analytics, and complaint triage.
+I build tools for the point where data meets day-to-day operations: reconciling inconsistent records, investigating surprising numbers, and turning repetitive analysis into repeatable workflows. My work spans pharmaceutical monitoring, mortgage analytics, and consumer-complaint triage.
 
 **I would rather find out why a number looks wrong than publish it.**
 
 ## Featured work
+
+| Focus | Evidence to explore |
+| :--- | :--- |
+| **Reliable data pipelines** | ShortageSignal: **16 data checks** before saving |
+| **Large-scale analysis** | CreditIQ: **8.68M mortgage applications**, SQL, and explainable ML |
+| **Applied AI evaluation** | CLAIRE: a **45% baseline to 80%+** team-reported result |
 
 ### [ShortageSignal](https://github.com/Showrish/shortagesignal)
 
@@ -67,10 +73,10 @@ A personal research project exploring historical approval decisions and demograp
 
 **Consumer complaint triage with an evaluation workflow** · Four-person course project
 
-Classifies complaints, assigns resolution timelines, and drafts acknowledgment messages using GPT-4o-mini and retrieval-augmented generation.
+A prompt-based Streamlit application that classifies complaints, assigns resolution timelines, and drafts acknowledgment messages using GPT-4o-mini.
 
 - **My contribution:** built the **Streamlit application and Evaluate tab**, including the interface for testing labeled complaint data.
-- The team improved product classification from a **45% zero-shot baseline to 80%+** in the final system's reported evaluation.
+- The team's final **v4a + RAG** evaluation reported product classification improving from a **45% zero-shot baseline to 80%+**.
 - Error analysis identified overlapping complaint labels as a limitation of the public dataset.
 
 <details>
@@ -82,7 +88,7 @@ Classifies complaints, assigns resolution timelines, and drafts acknowledgment m
 
 </details>
 
-`OpenAI API` `RAG` `FAISS` `Prompt evaluation` `Streamlit`
+`OpenAI API` `Prompt evaluation` `Streamlit`
 
 [Explore the project →](https://github.com/Showrish/CLAIRE) · [Evaluation results](https://github.com/Showrish/CLAIRE#prompting-strategy-results)
 
@@ -90,9 +96,9 @@ Classifies complaints, assigns resolution timelines, and drafts acknowledgment m
 
 | Project | What it demonstrates |
 | :--- | :--- |
-| **[Batch Monitor](https://github.com/Showrish/snowflake-batch-monitor)** | **Snowflake and manufacturing analytics.** Validates **1,005 public pharmaceutical batches**, with I-MR control charts and material genealogy in Streamlit. Checks results against independent pandas calculations. |
+| **[Batch Monitor](https://github.com/Showrish/snowflake-batch-monitor)** | **Snowflake and manufacturing analytics.** A pipeline and Streamlit app for **1,005 public pharmaceutical batches**, with I-MR charts, material genealogy, and independent pandas checks. Code and screenshots document the app built during a Snowflake trial. |
 | **[Request Handoff Check](https://github.com/Showrish/request-handoff-check)** | **Excel and process analysis.** Reconciles hiring requests across two systems, finds missing records, and identifies a **7.4-day Finance approval bottleneck**. Built on synthetic data with XLOOKUP, COUNTIFS, and PivotTables. |
-| **[WeatherCastML](https://github.com/Showrish/Weather-Forecast)** | **Data processing and forecasting.** Processes **92M NOAA records** with DuckDB and builds three LightGBM models for temperature, rain, and extreme weather, with a FastAPI interface. |
+| **[WeatherCastML](https://github.com/Showrish/Weather-Forecast)** | **Data processing and forecasting.** A solo project processing **92M NOAA records** with DuckDB and building three LightGBM models for temperature, rain, and extreme weather, with a FastAPI interface. |
 | **[Smart Water Quality](https://github.com/Showrish/Smart-Water-Quality-Prediction-using-IoT-and-ML-)** | **IoT and operational monitoring.** An undergraduate sensor and ML project, later extended with a Streamlit dashboard that flags stale data and implausible readings. |
 
 ## Technical toolkit
@@ -105,11 +111,11 @@ Classifies complaints, assigns resolution timelines, and drafts acknowledgment m
 | **Machine learning and AI** | scikit-learn · LightGBM · XGBoost · SHAP · OpenAI API · Claude API · RAG · FAISS |
 | **Testing and automation** | Git · GitHub Actions · pytest · ruff |
 
-## How I work
+## How I approach a project
 
-- **Check the data first.** Investigate missing records, mismatched IDs, and surprising totals before interpreting results.
-- **Evaluate AI against examples.** Use explicit labels, inspect errors, and make uncertain cases visible for review.
-- **Make the output usable.** Build dashboards, review lists, and documentation that help someone take the next step.
+- **Check the data first.** I investigate missing records, mismatched IDs, and surprising totals before interpreting results.
+- **Evaluate AI against examples.** I use explicit labels, inspect errors, and surface uncertain cases for review.
+- **Make the output usable.** I build dashboards, review lists, and documentation that help someone take the next step.
 
 ## Connect
 

@@ -2,7 +2,7 @@
 
 # Showrish Reddy Sampath
 
-### Data Analytics · Applied AI · Operations
+### Data Analytics · Applied AI
 
 **I turn messy operational data into reliable dashboards, automated workflows, and practical AI tools.**
 
